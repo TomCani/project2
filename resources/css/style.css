@@ -1,0 +1,97 @@
+/* UNIVERSAL STYLINGS */
+html {
+    height: 100%;
+    font-size: 22px;
+}
+
+body {
+    line-height: 1.4;
+}
+
+/* NAV */
+nav li {
+    margin-top: -2rem;
+}
+
+nav a {
+    color: white;
+}
+
+nav .left {
+    display: inline;
+    float: left;
+    padding: .3rem;
+}
+
+nav .right {
+    display: inline;
+    float: right;
+    padding: .4rem;
+}
+
+/* MAIN HEADER */
+.jumbotron-fluid {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../images/project2-jumbo.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    height: 80vh;
+    margin-bottom: 0;
+}
+
+.container-fluid h3 {
+    text-align: left;
+    color: white;
+    padding-top: 6rem;
+}
+
+p {
+    text-align: left;
+    color: white;
+    padding-top: .5rem;
+}
+
+button a {
+    color: black;
+    font-weight: 500;
+}
+
+/* WHAT MAKES US DIFFERENT */
+.white {
+    padding: 2rem 4rem 4rem 4rem;
+}
+
+.white p {
+    color: black;
+}
+
+.white h2 {
+    text-decoration: underline;
+}
+
+/* HOW IT WORKS */
+.gray {
+    background-color: lightgray;
+    padding: 4rem;
+}
+
+.gray p {
+    color: black;
+}
+
+.gray h2 {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    border-top: 2px solid black;
+    padding: 1rem 0;
+}
+
+footer p {
+    display: inline;
+    color: black;
+    font-weight: bold;
+}
