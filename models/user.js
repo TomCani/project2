@@ -38,18 +38,15 @@ module.exports = function (sequelize, Sequelize) {
       allowNull: false
     },
 
-    last_login: {
+    lastLogin: {
       type: Sequelize.DATE
     },
 
     status: {
-      type: Sequelize.ENUM('active', 'inactive'),
-      defaultValue: 'active'
+      type: Sequelize.ENUM("active", "inactive"),
+      defaultValue: "active"
     }
-
-
   });
 
   return User;
-
-}
+};
