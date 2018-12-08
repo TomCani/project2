@@ -4,6 +4,10 @@ var exphbs = require("express-handlebars");
 
 var db = require("./models");
 
+db.Transaction.belongsTo(db.User); // Will add UserId to Transactions
+db.Transaction.belongsTo(db.Fund); // Will add FundId to Transactions
+db.Fund.belongsTo(db.User); // Will add UserId to Funds
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
