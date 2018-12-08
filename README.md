@@ -17,4 +17,3 @@ Nice to Have, but not Required<br>
   -Use handlebars<br>
   -Incorporate Authentication<br>
   -Use an existing public dataset to power database<br>
-  -Create migration strategy
