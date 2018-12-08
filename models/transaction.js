@@ -1,12 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   var Transaction = sequelize.define("Transaction", {
-    fundId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
     amount: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -15,8 +8,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-
-  // Transaction.belongsTo("User"); // Will add companyId to user
 
   return Transaction;
 };
