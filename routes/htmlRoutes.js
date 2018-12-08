@@ -17,9 +17,21 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+<<<<<<< HEAD
   // cms route loads signup.html
   app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
+=======
+  // Load example page and pass in an example by id
+  app.get("/example/:id", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.render("example", {
+        example: dbExample
+      });
+    });
+>>>>>>> ec9a47475eb2d60abb0e746e1bdee8e646e87c10
   });
 
   // blog route loads signin.html
