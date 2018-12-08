@@ -9,24 +9,17 @@ body {
 }
 
 /* NAV */
-nav li {
-    margin-top: -2rem;
+nav {
+    background-color: #062743;
 }
 
-nav a {
-    color: white;
+.logo {
+    height: 8rem;
+    width: 8rem;
 }
 
-nav .left {
-    display: inline;
-    float: left;
-    padding: .3rem;
-}
-
-nav .right {
-    display: inline;
-    float: right;
-    padding: .4rem;
+.btn {
+    background-color: white;
 }
 
 /* MAIN HEADER */
@@ -39,16 +32,22 @@ nav .right {
     margin-bottom: 0;
 }
 
-.container-fluid h3 {
+.jumbotron-fluid h3 {
     text-align: left;
     color: white;
     padding-top: 6rem;
+    padding-left: 2rem;
 }
 
-p {
+.jumbotron-fluid p {
     text-align: left;
     color: white;
     padding-top: .5rem;
+    padding-left: 2rem;
+}
+
+.jumbotron-fluid .btn {
+    margin-left: 2rem;
 }
 
 button a {
@@ -94,4 +93,34 @@ footer p {
     display: inline;
     color: black;
     font-weight: bold;
+}
+
+/* ------------------ */
+/* ------------------ */
+
+/* PAGE2 */
+#page2 .container-fluid {
+    margin: 1rem;
+}
+
+#page2 .card {
+    margin: 1rem;
+}
+
+#page2 .card-body {
+    text-align: center;
+    background-color: #062743;
+    color: white;
+    border: 2px solid #ff7a8a;
+}
+
+#page2 .card a {
+    font-weight: bold;
+    /* border: 2px solid #ff7a8a; */
+    margin-top: .5rem;
+    display: block;
+}
+
+.btn-blue {
+    background-color: rgb(3, 163, 236);
 }
