@@ -9,7 +9,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  // Transaction.belongsTo("User"); // Will add companyId to user
-
   return Transaction;
 };
