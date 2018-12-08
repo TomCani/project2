@@ -1,19 +1,23 @@
 require("dotenv").config();
+
 var express = require("express");
 var exphbs = require("express-handlebars");
-
 var db = require("./models");
 var passport = require('passport')
 var session = require('express-session')
 var bodyParser = require('body-parser')
-var env = require('dotenv').load()
+var app = express();
+var PORT = process.env.PORT || 3000;
+
+//load passport strategies
+require('./config/passport/passport.js')(passport, db.User);
+
 
 db.Transaction.belongsTo(db.User); // Will add UserId to Transactions
 db.Transaction.belongsTo(db.Fund); // Will add FundId to Transactions
 db.Fund.belongsTo(db.User); // Will add UserId to Funds
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -42,27 +46,22 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-//Models
-var models = require("./app/models");
 
 //Routes
 
-var authRoute = require('./app/routes/auth.js')(app, passport);
+require('./routes/auth.js')(app, passport);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-//load passport strategies
-
-require('./app/config/passport/passport.js')(passport, models.user);
 
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
+// if (process.env.NODE_ENV === "test") {
+//   syncOptions.force = true;
+// }
 
 app.get("/", function(req, res) {
   res.send("Welcome to Passport with Sequelize");
@@ -70,7 +69,7 @@ app.get("/", function(req, res) {
 
 //Sync Database
 
-models.sequelize.sync().then(function () {
+db.sequelize.sync().then(function () {
 
   console.log('Nice! Database looks fine')
 
@@ -82,7 +81,7 @@ models.sequelize.sync().then(function () {
 });
 
 
-app.listen(5000, function (err) {
+app.listen(3000, function (err) {
 
   if (!err)
 
