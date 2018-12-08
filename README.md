@@ -1,6 +1,6 @@
 # project2
 
-Create Funder. Funder is a GoFundMe type of resource. A platform for individuals globally to raise funds for any cause. What sets us apart? Our platform does not take any fees for donating or credit cards fees. We are backed by investors who would like to see people positively change the world.
+Create Funder. Funder is a crowdfunding resource: a platform for individuals globally to raise funds for any cause. What sets us apart? Our platform does not take any fees for donating or credit cards transactions. We are backed by investors who would like to see people positively change the world.
 
 Requirements
   -Must use a Node and Express Server
