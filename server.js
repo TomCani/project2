@@ -51,7 +51,7 @@ app.set('view engine', '.hbs');
 
 require('./routes/auth.js')(app, passport);
 require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+// require("./routes/htmlRoutes")(app);
 
 
 

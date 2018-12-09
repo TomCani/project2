@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "funder_db",
+    "database": "funderdb",
     "host": "localhost",
     "dialect": "mysql"
   },
